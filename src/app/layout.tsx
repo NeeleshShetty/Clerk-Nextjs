@@ -8,6 +8,7 @@ import {
 	SignedOut,
 	UserButton,
 } from '@clerk/nextjs';
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,12 +27,7 @@ export default function RootLayout({
 				<html lang="en">
 					<body>
 						<header>
-							<SignedOut>
-								<SignInButton />
-							</SignedOut>
-							<SignedIn>
-								<UserButton />
-							</SignedIn>
+							<Link href='/sign-in'>SignIn</Link>
 						</header>
 						<main>{children}</main>
 					</body>
